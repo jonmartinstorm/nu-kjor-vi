@@ -42,3 +42,4 @@ Ting som jeg har brukt for å lære meg de diverse programvarene.
 - apalrd's adventures [on youtube](https://www.youtube.com/@apalrdsadventures/videos)
 - DevOps Directive [Complete Terraform Course - From BEGINNER to PRO! (Learn Infrastructure as Code)](https://youtu.be/7xngnjfIlK4?si=ZchQDAig5tDmNIJv)
 - Christian Lempa [Proxmox virtual machine _automation_ in Terraform](https://youtu.be/dvyeoDBUtsU?si=VmtJZ-79wN5DhZaa)
+- Learn Linux TV [Provisioning Virtual Machines in Proxmox with Terraform – Full Walkthrough](https://youtu.be/1kFBk0ePtxo?si=E4PWLQ2BYdTYPwoh)
