@@ -6,6 +6,28 @@ En liksom sikker hjemmelab stort sett satt opp med IaC
 
 Målet er å ha en så godt som automatisert oppsett av en hjemmelab som også er rimelig sikker. Og det med bruk av stort sett verktøy med åpen kildekode.
 
+### Tenkt arkitektur
+
+Dette er et forsøk på å tegne arkitekturen.
+
+```mermaid
+architecture-beta
+    group dmz[DMZ]
+
+    service guac(database)[Database] in dmz
+
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+```
+
 ## Tech støff
 
 Hva er det som hjemmelabben skal bestå av?
@@ -31,12 +53,13 @@ Nøkkelprogrammer:
 - Wiki.js [lenke](https://js.wiki/)
 - OpenProject [lenke](https://www.openproject.org/)
 - Kasm workspaces [lenke](https://kasmweb.com/)
+- Harbor [lenke](https://goharbor.io/)
+- Gitea [lenke](https://about.gitea.com/)
 
 Verktøy:
 
 - openTofu [lenke](https://opentofu.org/)
 - ansible [lenke](https://docs.ansible.com/)
-- packer [lenke](https://www.packer.io/)
 
 ## Eksterne bruksanvisninger
 
