@@ -13,19 +13,34 @@ Dette er et forsøk på å tegne arkitekturen.
 ```mermaid
 architecture-beta
     group dmz[DMZ]
+    group indre[Indre nettverk]
+    group k8s[K8S cluster] in indre
 
-    service guac(database)[Database] in dmz
+    service internett(cloud)[internett]
+    service ytrebr(server)[Ytre Brannmur]
+    service indrebr(server)[Indre Brannmur]
 
-    group api(cloud)[API]
+    service guac(server)[Apache Guacamole] in dmz
+    service filsluse(server)[filsluse] in dmz
 
-    service db(database)[Database] in api
-    service disk1(disk)[Storage] in api
-    service disk2(disk)[Storage] in api
-    service server(server)[Server] in api
+    service freeipa(server)[FreeIpa VM] in indre
+    service filserver(server)[Harbor og Gitea] in k8s
+    service keyradius(server)[KeyCloak FreeRadius VM] in indre
+    service database(database)[PostGRES] in indre
 
-    db:L -- R:server
-    disk1:T -- B:server
-    disk2:T -- B:db
+    service brukerpod(disk)[BrukerPod] in k8s
+    service nextcloud(disk)[NextCloud] in k8s
+    service mattermost(disk)[MatterMost] in k8s
+
+    internett:R -- L:ytrebr
+    ytrebr:R -- L:guac
+    ytrebr:R -- L:filsluse
+    indrebr:L -- R:guac
+    indrebr:L -- R:filsluse
+    indrebr:B -- T:brukerpod
+    brukerpod:R -- L:mattermost
+    brukerpod:R -- L:nextcloud
+    freeipa:R -- L:keyradius
 ```
 
 ## Tech støff
