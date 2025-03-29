@@ -43,6 +43,22 @@ architecture-beta
     freeipa:R -- L:keyradius
 ```
 
+### Status PT
+
+Her er vi i dag.
+
+```mermaid
+architecture-beta
+    group indre[Indre nettverk]
+
+
+    service ytrebr(server)[Ytre Brannmur]
+    service tester(disk)[FedoraDesktop] in indre
+    service host(internet)[Host]
+
+    host:T -- B:tester
+```
+
 ## Tech støff
 
 Hva er det som hjemmelabben skal bestå av?
@@ -58,18 +74,22 @@ Nøkkelprogrammer:
 - Proxmox VE [lenke](https://www.proxmox.com/en/)
 - Rocky Linux [lenke](https://rockylinux.org/no-NO)
 - Ubuntu 24.04 [lenke](https://ubuntu.com/)
+- Fedora 41 [lenke](https://fedoraproject.org/)
 - OPNsense/pfSense [lenke](https://opnsense.org/)
 - FreeIPA [lenke](https://www.freeipa.org/)
-- KeyCloal [lenke](https://www.keycloak.org/)
+- KeyCloak [lenke](https://www.keycloak.org/)
 - kubernetes [lenke](https://kubernetes.io/)
 - NextCloud [lenke](https://nextcloud.com/)
 - MatterMost [lenke](https://mattermost.com/)
 - apache guacemole [lenke](https://guacamole.apache.org/)
 - Wiki.js [lenke](https://js.wiki/)
 - OpenProject [lenke](https://www.openproject.org/)
+- Plane [lenek](https://plane.so/)
+- ERPNext [lenke](https://frappe.io/erpnext)
+- Zarf [lenke](https://zarf.dev/)
 - Kasm workspaces [lenke](https://kasmweb.com/)
 - Harbor [lenke](https://goharbor.io/)
-- Gitea [lenke](https://about.gitea.com/)
+- Forgejo [lenke](https://forgejo.org/)
 
 Verktøy:
 
