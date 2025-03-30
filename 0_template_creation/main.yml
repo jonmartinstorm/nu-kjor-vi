@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars_files:
+    - vars/api_key.yml
+
+  tasks:
+    - name: Echo the API nøkkelen som kommer fra env.
+      shell: echo $API_KEY
+      environment:
+        API_KEY: "{{proxmox_api_token_secret}}"
+      register: echo_result
+
+    - name: Vi resulatet.
+      debug: var=echo_result.stdout

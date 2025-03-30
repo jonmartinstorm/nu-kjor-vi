@@ -1,0 +1,17 @@
+- hosts: 192.168.45.185
+  become: false
+  gather_facts: false
+
+  vars_files:
+    - vars/api_key.yml
+
+  tasks:
+    - name: Create new container with minimal options
+      community.general.proxmox:
+        vmid: 130
+        api_user: "{{proxmox_api_user}}"
+        api_token_id: "{{proxmox_api_token_id}}"
+        api_token_secret: "{{proxmox_api_token_secret}}"
+        api_host: 192.168.45.185
+        node: pve
+        name: vmtest

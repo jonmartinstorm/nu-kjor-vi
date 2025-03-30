@@ -6,7 +6,7 @@ Før vi kjører i gang med opentofu så må vi ha noen templates i Proxmox
 
 For å gjøre det enkelt så lager vi tre templates med cloud-init, så det ligner på ting som ville vært i sky. Mye mulig jeg tar helt feil her, men sånn er det.
 
-Jeg har prøvd å finne gode måter å automatisere dette på, med packer, ansible eller bare python+proxmox apiet. Ansible ser ut som kunne godt, men det er mye koding for noe som er enklere med litt bash som root i Proxmox. Så automatisering er TODO her, mulig med hjelp fra [denne bloggen](https://homelabing.fr/how-to-automate-proxmox-ve-using-ansible/).
+Jeg har prøvd å finne gode måter å automatisere dette på, med packer, ansible eller bare python+proxmox apiet. Ansible ser ut som kunne godt, men det er mye koding for noe som er enklere med litt bash som root i Proxmox. Så automatisering er TODO her, mulig med hjelp fra [denne bloggen](https://homelabing.fr/how-to-automate-proxmox-ve-using-ansible/) eller bare [den offisielle community utvidelsen](https://docs.ansible.com/ansible/latest/collections/community/general/proxmox_module.html)
 
 Jeg har satt opp tre templates
 

@@ -1,0 +1,4 @@
+proxmox_api_url: "value"
+proxmox_api_token_id: "value"
+proxmox_api_token_secret: "value"
+proxmox_api_user: "value"
