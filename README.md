@@ -69,16 +69,22 @@ Hva er det som hjemmelabben skal bestå av?
 
 ### Programvare
 
-Nøkkelprogrammer:
+Hypervisor og vm støff:
 
 - Proxmox VE [lenke](https://www.proxmox.com/en/)
+- kubernetes [lenke](https://kubernetes.io/)
+- k3s [lenke](https://k3s.io/)
+- Podman [lenke](https://podman.io/)
+
+Nøkkelprogrammer:
+
 - Rocky Linux [lenke](https://rockylinux.org/no-NO)
 - Ubuntu 24.04 [lenke](https://ubuntu.com/)
 - Fedora 41 [lenke](https://fedoraproject.org/)
 - OPNsense/pfSense [lenke](https://opnsense.org/)
 - FreeIPA [lenke](https://www.freeipa.org/)
 - KeyCloak [lenke](https://www.keycloak.org/)
-- kubernetes [lenke](https://kubernetes.io/)
+
 - NextCloud [lenke](https://nextcloud.com/)
 - MatterMost [lenke](https://mattermost.com/)
 - apache guacemole [lenke](https://guacamole.apache.org/)
