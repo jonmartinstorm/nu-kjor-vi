@@ -18,36 +18,17 @@ Jeg har satt opp tre templates
 
 For mye jobb å sette opp dette med automatisk templating, så da er det en todo å automatisere denne.
 
-## Fedora
+## Fedora CoreOS
 
-```console
+Her var det faktisk et supert verktøy som noen flinke folk i frankrike har laget ([lenke](https://wiki.geco-it.net/public:pve_fcos))
 
-```
+## Talos Linux
 
-## Ubuntu
+Og her er det et fint oppsett fra Olav S. Thoresen ([Talos cluster on Proxmox with Terraform](https://olav.ninja/talos-cluster-on-proxmox-with-terraform))
+
+## Andre
 
 Her har jeg bare endret apalards script ([lenke til blogpost](https://www.apalrd.net/posts/2023/pve_cloud/))
-
-```console
-$ qm create 9000 --name vyos2 --memory 2048 --net0 virtio,bridge=vmbr0
-$ qm importdisk 9000 /root/tmp/vyos-2025.03.23-0020-rolling-generic-amd64.qcow2 pve-zfs
-$ qm set 9000 --virtio0 pve-zfs:vm-9000-disk-0
-$ qm set 9000 --boot order=virtio0
-```
-
-Så setter vi opp cloud-init etter det Proxmox mener er rett ([lenke til docs](https://pve.proxmox.com/wiki/Cloud-Init_Support))
-
-```console
-$ qm set 9000 --ide2 local-lvm:cloudinit
-$ qm set 9000 --boot order=virtio0
-$ qm set 9000 --serial0 socket --vga serial0
-```
-
-Og så helt til slutt lage et template
-
-```console
-$ qm template 9000
-```
 
 # Notater om sikkerhet
 
